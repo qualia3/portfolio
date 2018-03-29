@@ -1,0 +1,170 @@
+label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  color: #FFF;
+  background-size: cover;
+  -webkit-transition: opacity .5s ease;
+  -moz-transition: opacity .5s ease;
+  -ms-transition: opacity .5s ease;
+  -o-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+  position: relative;
+}
+label::before {
+  display: block;
+  content: '';
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  transition: .7s;
+}
+label:hover::before {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+label.link1 {
+  background-image: url(../../img/gregory.jpg);
+}
+label.link2 {
+  background-image: url(../../img/goldengoose_men.jpg);
+}
+label.link3 {
+  background-image: url(../../img/tkg_html_mail.jpg);
+}
+label.link4 {
+
+}
+
+label p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.7em;
+  font-weight: 200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+.modal .modal-check {
+  display: none;
+}
+.modal .modal-body {
+  display: none;
+}
+.modal .modal-window {
+  position: relative;
+  z-index: 100001;
+  animation: fadeout .4s 1 forwards, zoomout .4s 1 forwards;
+}
+.modal .modal-label {
+  position: absolute;
+  top: -20px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-size: 20px;
+  background: #099;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+.modal .modal-label:hover {
+  opacity: 1;
+  background: #00cccc;
+}
+.modal .modal-label:active {
+  background: cyan;
+}
+.modal .modal-inner {
+  display: flex;
+  width: 80vw;
+  max-width: 680px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+div.modal-image {
+  margin: 20px;
+  width: 40vw;
+  max-width: 300px;
+  height: 50vw;
+  max-height: 400px;
+  overflow: scroll;
+}
+.modal .modal-content {
+  padding-top: 20px;
+}
+.modal .modal-content dt {
+  font-size: 1.7em;
+}
+.modal .modal-content dd {
+  margin-top: -4px;
+}
+.modal .modal-content dd:last-child {
+  padding: .7em 0 0 .3em;
+}
+.modal .modal-check:checked + .modal-body {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100000;
+  animation: fadein .4s 1 forwards;
+}
+.modal .modal-check:checked + .modal-body .modal-window {
+  animation: zoomin .4s 1 forwards;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes zoomin {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes zoomout {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+@keyframes hide {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}

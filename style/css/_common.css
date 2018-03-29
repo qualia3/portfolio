@@ -1,0 +1,359 @@
+.mgn10vh {
+  height: 10vh;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  background-color: #fafafa;
+  font-family: "Yu Gothic", YuGothic,Noto Sans Japanese,Arial,"游ゴシック","ヒラギノ角ゴ Pro W3",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック",MS PGothic,sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+div.wrap {
+}
+/* TOP CONTENTS */
+div.top-wrap {
+  width: 100%;
+  padding: 0 4.5%;
+  height: auto;
+  letter-spacing: 1.5px;
+  background-color: #FFF;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #dbdbdb;
+  z-index: 2;
+}
+div.top {
+  margin: 0 auto;
+  max-width: 980px;
+  overflow: hidden;
+}
+/* h1.topicon {
+  width: 100%;
+  margin-right: auto;
+  height: 70px;
+}
+.topicon a {
+  width: auto;
+  color: #FFF;
+  font-size: 40px;
+  font-weight: normal;
+  position: relative;
+}
+.topicon a::after {
+  position: absolute;
+  top: 3px;
+  left: -8px;
+  border-style: solid;
+  border-width: 41.6px 24px 0 24px;
+  border-color: #CCC transparent transparent transparent;
+  transform: rotate(10deg);
+  content: "";
+  z-index: -1;
+}
+.topicon span {
+  color: #000;
+  font-size: 29px;
+  position: absolute;
+  top: 2px;
+  left: 30px;
+} */
+h1.topicon {
+  width: 100%;
+  text-transform: uppercase;
+  align-items: center;
+}
+nav.topNav {
+  width: 100%;
+  padding-top: 10px;
+  margin-left: auto;
+  text-transform: uppercase;
+  text-align: right;
+}
+ul.top-nav-inner {
+}
+ul.top-nav-inner li {
+  display: inline-block;
+}
+ul.top-nav-inner li a {
+  position: relative;
+  display: inline-block;
+  padding: 5px 0;
+  border: 1px solid transparent;
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+ul.top-nav-inner li a::before,
+ul.top-nav-inner li a::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 1px solid transparent;
+  transition: 1s;
+}
+ul.top-nav-inner li a::before {
+  top: 0;
+  left: 0;
+}
+ul.top-nav-inner li a::after {
+  bottom: 0;
+  right: 0;
+}
+ul.top-nav-inner li a:hover::before,
+ul.top-nav-inner li a:hover::after {
+  width: 100%;
+  height: 100%;
+}
+ul.top-nav-inner li a:hover::before {
+  border-top-color: #dbdbdb;
+  border-right-color: #dbdbdb;
+  transition: width .1s, height .1s .1s;
+}
+ul.top-nav-inner li a:hover::after {
+  border-bottom-color: #dbdbdb;
+  border-left-color: #dbdbdb;
+  transition: height .1s .3s, width .1s .2s;
+}
+hr {
+  margin: 0;
+  height: 1px;
+  background-color: #dbdbdb;
+  border: none;
+  color: #dbdbdb;
+}
+
+/* HEADER */
+div.main {
+  max-width: 1090px;
+}
+header {
+  margin: 0 5%;
+}
+header.profile-header {
+  display: flex;
+  padding: 65px 0;
+}
+div.thumbnail-container {
+  display: flex;
+  width: 220px;
+  height: 220px;
+  min-width: 140px;
+  justify-content: center;
+  align-items: center;
+}
+img.thumbnail {
+  clip-path: circle(110px at center);
+  -webkit-clip-path: circle(110px at center);
+  -mz-clip-path: circle(110px at center);
+}
+table.profile-container {
+  margin-left: 10%;
+  font-size: 17px;
+  //background-color: rgba(255,255,255,0.7);
+}
+table.profile-container caption {
+  padding-bottom: 10px;
+  //background-color: rgba(255,255,255,0.7);
+}
+h2.header-ttl {
+  padding-left: 5px;
+  text-align: left;
+  font-size: 40px;
+  font-weight: normal;
+  letter-spacing: 3px;
+}
+table.profile-container tr {
+  display: flex;
+  margin-left: 15px;
+  height: 40px;
+}
+table.profile-container th {
+  display: block;
+  width: 120px;
+  text-align: left;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+table.profile-container td {
+  margin-top: 5px;
+  padding-left: 35px;
+  letter-spacing: 1.5px;
+}
+table.profile-container td span {
+  letter-spacing: 0;
+}
+
+/* MENU */
+div.menu {
+  display: flex;
+  width: 100%;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+}
+div.menu a {
+  display: flex;
+  margin-top: -1px;
+  height: 52px;
+  color: #999;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #eaeaea;
+}
+div.menu a:first-child {
+  margin-right: 60px;
+}
+div.menu a.active {
+  border-top: 1px solid #ff0000;
+  color: #000;
+}
+.menu a div {
+  display: flex;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+
+/* FOOTER */
+footer.foot-wrap {
+  margin: 0 auto;
+  padding: 0 2.5%;
+  max-width: 1090px;
+}
+
+div.foot-contents {
+  text-transform: uppercase;
+}
+
+nav.footNav {
+  margin-right: auto;
+  width: 100%;
+}
+
+ul.acclist li {
+  display: inline-block;
+  padding-bottom: 7px;
+}
+
+ul.acclist li a {
+  color: #005588;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+div.foot-contents span {
+  display: block;
+  width: 100%;
+  color: #999;
+  text-align: right;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+}
+
+@media/*大きい時*/ (min-width: 876px) {
+  div.top {
+    display: flex;
+  }
+  .top-nav-inner li {
+    margin-left: 8%;
+  }
+  div.main {
+    margin: 0 auto;
+    padding: 0 2%;
+  }
+  div.thumbnail-container {
+    margin: auto 8%;
+  }
+  header.profile-header {
+    display: flex;;
+  }
+  div.foot-contents {
+    display: flex;
+    padding: 38px 0;
+  }
+  ul.acclist li {
+    margin-right: 3%;
+  }
+}
+
+@media/*小きい時*/ (max-width: 875px) {
+  div.top {
+  }
+  div.top h1 {
+    margin: 0 auto;
+    text-align: center;
+  }
+  ul.top-nav-inner {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .top-nav-inner li {
+    margin: 2%;
+  }
+  header.profile-header {
+    padding: 0;
+    margin-bottom: 5%;
+  }
+  div.main {
+    padding: 40px 3% 0;
+  }
+  div.header-ttl {
+    margin: 0 5%;
+  }
+  div.header {
+    padding-bottom: 90px;
+  }
+  div.thumbnail-container {
+    margin: 3% 0 0 10%;
+    width: 140px;
+    height: 140px;
+  }
+  img.thumbnail {
+    clip-path: circle(70px at center);
+    -webkit-clip-path: circle(70px at center);
+    -mz-clip-path: circle(70px at center);
+  }
+  table.profile-container {
+    margin-left: 16%;
+  }
+  h2.header-ttl {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+  div.menu a:first-child {
+    margin-right: 10%;
+  }
+  footer.foot-wrap {
+    padding: 0 10%;
+  }
+  div.foot-contents {
+    padding: 10px 0;
+  }
+  ul.acclist {
+    margin: 0 auto;
+    text-align: center;
+  }
+  ul.acclist li {
+    margin: 0 1.5%;
+    text-align: center;
+  }
+  div.foot-contents span{
+    margin: 0 auto;
+    text-align: center;
+  }
+}
