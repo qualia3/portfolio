@@ -13,19 +13,23 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400" rel="stylesheet">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript">
-    $(function() {
-      var offsetY = -10;
-      var time = 500;
-      $('a[href^=#]').click(function() {
-        var target = $(this.hash);
-        console.log(target);
-        if (!target.length) return ;
-        var targetY = target.offset().top+offsetY;
-        $('html, body').animate({scrollTop: targetY}, time, 'swing');
-        window.history.pushState(null, this.hash);
-        return false;
-      });
-    });
+
+
+    // $(function() {
+    //   var offsetY = -10;
+    //   var time = 500;
+    //   $('a[href^=#]').click(function() {
+    //     console.log(this.hash);
+    //     console.log($(this.hash));
+    //     var target = $(this.hash);
+    //     console.log('clickされた', target);
+    //     if (!target.length) return ;
+    //     var targetY = target.offset().top+offsetY;
+    //     $('html, body').animate({scrollTop: targetY}, time, 'swing');
+    //     window.history.pushState(null, this.hash);
+    //     return false;
+    //   });
+    // });
 
 
 
