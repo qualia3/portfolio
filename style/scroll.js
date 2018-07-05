@@ -26,7 +26,7 @@ $(function(){
     return document.documentElement;
   })();
   // #で始まるリンクをクリックしたら実行されます
-  $('a[href^="#"]').click(function() {
+  $('a[href^="#"]').not('.noscroll').on('click', function() {
     // スクロールの速度
     var speed = 900; // ミリ秒で記述
     var href= $(this).attr("href");
