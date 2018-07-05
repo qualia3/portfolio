@@ -1,11 +1,3 @@
-$(function() {
-  var timer = false;
-  $(window).on('load resize', function(){
-    if (timer !== false) {
-      clearTimeout(timer);
-    }
-  });
-});
 // Navスクロールすると固定 -----------------
 $(function() {
   var $win = $(window),
@@ -24,6 +16,15 @@ $(function() {
 
 // スムーズスクロール --------------------------
 $(function(){
+  var scrollElm = (function() {
+    if('scrollingElement' in document) {
+      return document.scrollingElement;
+    }
+    if(navigator.userAgent.indexOf('WebKit') != -1) {
+      return document.body;
+    }
+    return document.documentElement;
+  })();
   // #で始まるリンクをクリックしたら実行されます
   $('a[href^="#"]').click(function() {
     // スクロールの速度
