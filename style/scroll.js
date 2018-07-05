@@ -1,3 +1,11 @@
+$(function() {
+  var timer = false;
+  $(window).on('load resize', function(){
+    if (timer !== false) {
+      clearTimeout(timer);
+    }
+  });
+});
 // Navスクロールすると固定 -----------------
 $(function() {
   var $win = $(window),
