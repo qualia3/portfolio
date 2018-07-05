@@ -1,0 +1,264 @@
+section#atWorks {
+  font-family: 'Avenir Next W01 Thin', Arial, 'AxisStd-Light', "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+
+  height: auto;
+  flex-wrap: wrap;
+}
+div.works-inner {
+  padding-bottom: 8vh;
+  color: #FFF;
+  background: -webkit-linear-gradient(#a26cd0, #ffa67b);
+  background: -o-linear-gradient(#a26cd0, #ffa67b);
+  background: linear-gradient(#a26cd0, #ffa67b);
+  position: relative;
+}
+div.works-caption {
+  width: 100%;
+  max-height: 350px;
+  height: 30vw;
+}
+div.works-caption h3 {
+  margin-top: 35em;
+  padding-top: 5em;
+  text-align: center;
+  /* transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%); */
+}
+p.works-text {
+  width: 100%;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: .9em;
+  font-style: oblique;
+  position: absolute;
+  bottom: .6rem;
+  line-height: 1;
+}
+
+svg#works-title {
+  display: block;
+  margin: 0 auto;
+  width: 65vw;
+  max-width: 650px;
+}
+
+.works-inner ul {
+  margin: 0 auto;
+  width: 90%;
+  font-size: 0;
+}
+.works-inner li {
+  display: inline-block;
+  overflow: hidden;
+  margin-left: 2.5%;
+  margin-top: 1.5%;
+  width: 30%;
+  height: 20em;
+  font-size: 13px;
+}
+.works-inner li:nth-child(-n+3) {
+  margin-top: 0;
+}
+.works-inner label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  color: #FFF;
+  background-size: cover;
+  -webkit-transition: opacity .5s ease;
+  -moz-transition: opacity .5s ease;
+  -ms-transition: opacity .5s ease;
+  -o-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+  position: relative;
+  border: solid 6px #FFF;
+  transition: border 0.3s;
+}
+.works-inner label:hover {
+  border: solid 0 #FFF;
+}
+.works-inner label::before {
+  display: block;
+  content: '';
+  height: 100%;
+  background-color: rgba(0, 0, 0, .65);
+  transition: .4s
+}
+.works-inner label:hover::before {
+  background-color: rgba(0, 0, 0, .4);
+}
+.works-inner label.link1 {
+  background-image: url(../../img/gregory.jpg);
+}
+.works-inner label.link2 {
+  background-image: url(../../img/goldengoose_men.jpg);
+}
+.works-inner label.link3 {
+  background-image: url(../../img/tkg_html_mail.jpg);
+}
+.works-inner label.link4 {
+  background-image: url(../../img/tkg_lp.png);
+}
+/* .works-inner label.link1:hover {
+  transform: scale(1.1);
+    object-fit: cover;
+} */
+
+.works-inner label p {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.7em;
+  font-weight: 200;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+.works-inner label span {
+  display: block;
+  font-size: .5em;
+}
+
+/* modal */
+.modal .modal-check {
+  display: none;
+}
+.modal .modal-body {
+  display: none;
+}
+.modal .modal-window {
+  position: relative;
+  z-index: 100001;
+  animation: fadeout .4s 1 forwards, zoomout .4s 1 forwards;
+}
+.modal .modal-label {
+  display: flex;
+  position: absolute;
+  top: -20px;
+  right: 5px;
+  color: #FFF;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-size: 20px;
+  background: #099;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+.modal .modal-label:hover {
+  opacity: 1;
+  background: #00cccc;
+}
+.modal .modal-label:active {
+  background: cyan;
+}
+.modal .modal-inner {
+  display: flex;
+  width: 85vw;
+  max-width: 800px;
+  background: #FFF;
+  border-radius: 3px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+div.modal-image {
+  margin: 20px;
+  height: 64vh;
+  max-height: 520px;
+  overflow: scroll;
+}
+.modal .modal-content {
+  padding-top: 3.5em;
+}
+.modal .modal-content dt {
+  font-size: 1em;
+}
+.modal .modal-content dd {
+  margin-top: -4px;
+}
+.modal .modal-content dd:last-child {
+  padding: 2em 0 0 .3em;
+}
+.modal .modal-content dd p {
+  width: 90%;
+}
+.modal .modal-content dd span {
+  display: block;
+  font-size: .8em;
+}
+.modal .modal-check:checked + .modal-body {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100000;
+  animation: fadein .4s 1 forwards;
+}
+.modal .modal-check:checked + .modal-body .modal-window {
+  animation: zoomin .4s 1 forwards;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes zoomin {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes zoomout {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+@keyframes hide {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+/* modal */
+@media/*小きい時*/ (max-width: 875px) {
+  section#atWorks li {
+    height: 10em;
+  }
+}
+@media/*小きい時*/ (max-width: 750px) {
+  .modal .modal-content dt {
+    font-size: 1.2em;
+    width: 40vw;
+  }
+}
