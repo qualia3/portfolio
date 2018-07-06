@@ -24,12 +24,13 @@ h1 {
 }
 h1 a {
   margin-left: .3em;
-  font-size: 1.6em;
-  color: rgba(255, 255, 255, .1);
-  text-transform: uppercase;
+  font-size: 200%;
+  color: hsla(0, 0%, 0%, 0.2);
+  /* text-transform: uppercase; */
 }
 /* menu */
 nav.mainNav {
+  margin-top: 2.2em;
   width: 100%;
   text-transform: uppercase;
 }
@@ -95,29 +96,32 @@ ul.mainNav-list li.active a:hover {
 /*--------------------------
 about
 --------------------------*/
-#atAbout img {
+.about-top {
+  margin-bottom: -.5em;
+}
+img.thumnail {
   width: 55%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   z-index: -1;
 }
-div.about-inner {
-  padding-top: 8em;
-  padding-right: 3em;
-  height: 123vh;
+div.about-text {
   text-align: right;
+  position: absolute;
+  top: 40%;
+  right: 3em;
 }
-h2 {
+h2 {;
   font-size: 3em;
   text-shadow: rgba(255, 255, 255, 0.6) 2px 1px 1px;
 }
-.about-career {
-  margin-left: 67%;
-  padding-top: 5rem;
-  font-size: .8em;
+div.about-text p {
+  margin-top: 0.5em;
 }
-.contents-text {
+div.about-career {
+  font-size: .8em;
+  position: relative;
+}
+div.contents-text {
   text-align: left;
 }
 /* ラヂオのとこ */
@@ -136,7 +140,7 @@ h2 {
   content: 'EN';
   font-size: .8em;
   text-align: center;
-  border: 1px solid #ccc;
+  border: .1em solid #ccc;
   border-radius: 2em;
   padding: .3em;
   background: #EEE;
@@ -151,8 +155,8 @@ h2 {
   font-size: .8em;
   border-radius: 0 0 2em 2em;
   position: absolute;
-  top: 40.8em;
-  right: 4.8em;
+  top: 2em;
+  left: .1em;
   background: #FFF;
 }
 #language + label:hover::before {
@@ -165,11 +169,13 @@ h2 {
 }
 #language:checked + label::after {
   color: #FFF;
-  height: 2em;
+  width: 3.8em;
+  height: 1.9em;
   content: 'JA';
   background-color: #888888;
   text-align: center;
   transition: background-color .3s ease-in-out;
+  border-radius: 0 0 2em 2em;
 }
 #language:not(:checked) + label + .contents-text *[lang="ja"], #language:checked + label + .contents-text *[lang="en"] {
   display: none;
@@ -208,6 +214,11 @@ h2 {
 
 /* /もっとみるのとこ */
 
+img.subimages {
+  width: 45%;
+  float: right;
+
+}
 
 /*--------------------------
 FOOTER
