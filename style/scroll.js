@@ -10,7 +10,6 @@ $(function() {
     } else {
       $cloneNav.removeClass(showClass);
     }
-    window.history.replaceState(null, '', location.pathname + location.search);
   });
 });
 
