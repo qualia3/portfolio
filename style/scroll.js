@@ -1,3 +1,7 @@
+$(function() {
+  $(‘label’).click(function() {});
+});
+
 // Navスクロールすると固定 -----------------
 $(function() {
   var $win = $(window),
