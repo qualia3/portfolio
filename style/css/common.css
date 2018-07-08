@@ -179,7 +179,7 @@ div.about-career {
   position: relative;
 }
 div.en_ja {
-  padding: 12em 6em 0;
+  padding: 10em 6em 0;
   text-align: left;
   color: rgba(76, 76, 76, 0.73);
 }
@@ -199,7 +199,7 @@ div.en_ja {
   background: #EEE;
   transition: background-color .2s ease-in-out;
   position: absolute;
-  top: 9em;
+  top: 7em;
   left: 7.3em;
   cursor: pointer;
 }
@@ -211,7 +211,7 @@ div.en_ja {
   font-size: .8em;
   border-radius: 0 0 2em 2em;
   position: absolute;
-  top: 11em;
+  top: 9em;
   left: 7.4em;
   background: #FFF;
 }
@@ -234,19 +234,55 @@ div.en_ja {
 }
 /* もっとみるのとこ */
 div.contents-hidden {
-  margin: 2em 6em;
-  position: relative;
+  margin: 0 6em 2em;
   padding: 0;
+  height: 15em;
+  position: relative;
+}
+div.contents-hidden::before {
+  width: 100%;
+  height: 100%;
+  content: '';
+  position: absolute;
+  top: 1.5em;
+  left: 0;
+  background: url(../../img/ishi.png);
+  background-repeat: no-repeat;
+  background-size: 10%;
+  background-position: center;
+  -webkit-animation-name:fuwafuwa; /* fuwafuwaっていうアニメーションをしてね！ */
+  -webkit-animation-duration:2s;
+  -webkit-animation-iteration-count:infinite;
+  /*-webkit-animation-direction:alternate;*/
+  -webkit-animation-timing-function:ease;
+  -moz-animation-name:fuwafuwa;
+  -moz-animation-duration:2s;
+  -moz-animation-iteration-count:infinite;
+  /*-moz-animation-direction:alternate;*/
+  -moz-animation-timing-function:ease;
+  opacity: 0.7;
+  z-index: -1;
+}
+/* fuwafuwaっていうアニメーションはこんなふうだよ！ */
+@-webkit-keyframes fuwafuwa {
+	0% {-webkit-transform:translate(0, 0);}
+	50% {-webkit-transform:translate(0, -10px);}
+	100% {-webkit-transform:translate(0, 0);}
+}
+@-moz-keyframes fuwafuwa {
+	0% {-moz-transform:translate(0, 0);}
+	50% {-moz-transform:translate(0, -10px);}
+	100% {-moz-transform:translate(0, 0);}
 }
 div.hidden_show {
   display: flex;
-  margin-top: 2em;
   padding: 0;
   width: 0;
-  height: 25em;
-  overflow: hidden;
+  height: 15em;
+  background: rgba(250, 250, 250, 0.75);
   opacity: 0;
-  transition: all 0.8s ease;
+  overflow: hidden;
+  transition: all 0.7s ease;
 }
 /* もっとみるのボタン */
 #morecareer {
@@ -257,8 +293,9 @@ div.contents-hidden label {
   border: solid 1px #000;
   cursor :pointer;
   position: relative;
-  top: 1em;
-  left: 38%;
+  top: 16em;
+  left: 81%;
+  z-index: 2
 }
 div.contents-hidden label::before {
   padding: .7em;
@@ -273,7 +310,7 @@ div.contents-hidden label::before {
   opacity: 0;
 }
 #morecareer:checked ~ .hidden_show {
-  height: 25em;
+  height: 15em;
   width: 100%;
   opacity: 1;
 }
@@ -282,12 +319,34 @@ div.contents-hidden label::before {
 }
 /* もっとみるの文章のとこ */
 h4 {
-
+  margin-bottom: .5em;
+  width: fit-content;
+  color: #999;
+  font-size: 16px;
+  font-weight: normal;
+  text-align: left;
+  letter-spacing: 2px;
+  border-bottom: solid 1px;
 }
-/* .hidden_show table {
-  width: 60%;
-} */
-
+.career-career {
+  width: 100%;
+}
+.career-career caption, .career-career th {
+  text-align: left;
+  font-weight: normal;
+}
+.career-career td {
+  padding-left: .8em;
+}
+.career-skill {
+  margin-left: 5%;
+  width: 80%;
+}
+.career-skill li {
+  padding-left: .2em;
+  list-style: square;
+  list-style-position: inside;
+}
 
 
 
