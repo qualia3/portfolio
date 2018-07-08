@@ -172,88 +172,36 @@ img.subimages {
   width: 45%;
   float: right;
 }
-/* lang切り替えのとこ */
+/* ラヂオのとこ */
 div.about-career {
   width: 55%;
   font-size: .8em;
   position: relative;
 }
-div.contents-language .en_ja {
+div.en_ja {
   padding: 12em 6em 0;
   text-align: left;
   color: rgba(76, 76, 76, 0.73);
 }
-div.contents-language label {
+#language {
+  display: none;
+}
+#language + label::before {
   display: inline-block;
   width: 4em;
   height: 4em;
-  content: '';
+  content: 'EN';
   font-size: .8em;
   text-align: center;
   border: .1em solid #ccc;
   border-radius: 2em;
   padding: .3em;
   background: #EEE;
-  cursor: pointer;
   transition: background-color .2s ease-in-out;
   position: absolute;
   top: 9em;
   left: 7.3em;
-}
-div.contents-language label::after {
-  display: block;
-  width: 3.89em;
-  height: 1.9em;
-  content: '';
-  font-size: .8em;
-  border-radius: 0 0 2em 2em;
-  position: absolute;
-  top: 2em;
-  left: 0;
-  background: #FFF;
-}
-.contents-language input:checked + .contents-language label::after {
-  color: #FFF;
-  width: 3.8em;
-  height: 1.9em;
-  content: 'JA';
-  background-color: #888888;
-  text-align: center;
-  transition: background-color .3s ease-in-out;
-  border-radius: 0 0 2em 2em;
-}
-div.contents-language input {
-  display: none;
-}
-.contents-language input:not(:checked) ~ .en_ja *[lang="ja"], .contents-language input:checked ~ .en_ja *[lang="en"] {
-  display: none;
-}
-
-/* div.about-career label {
-  cursor:pointer;
-}
-#language {
-  display: none;
-}
-#language + label::before {
-#language + label::after {
-  display: block;
-  width: 3.8em;
-  height: 1.9em;
-  content: '';
-  font-size: .8em;
-  border-radius: 0 0 2em 2em;
-  position: absolute;
-  top: 11em;
-  left: 7.4em;
-  background: #FFF;
-}
-#language:checked + label::before {
-  content: '';
-  background-color: #FFF;
-}
-#language:checked + label::after {
-
+  cursor: pointer;
 }
 #language + label::after {
   display: block;
@@ -280,43 +228,67 @@ div.contents-language input {
   text-align: center;
   transition: background-color .3s ease-in-out;
   border-radius: 0 0 2em 2em;
-}*/
-
- #language:checked + label + .en_ja *[lang="en"]
-
+}
+#language:not(:checked) + label + .en_ja *[lang="ja"], #language:checked + label + .en_ja *[lang="en"] {
+  display: none;
+}
 /* もっとみるのとこ */
 div.contents-hidden {
   margin: 2em 6em;
-  width: 100%;
-  height: 25em;
   position: relative;
   padding: 0;
 }
-div.contents-hidden label {
-  padding: 15px;
-  font-weight: bold;
-  border: solid 2px black;
-  cursor :pointer;
-}
-div.contents-hidden label:hover {
-  background: #efefef;
-}
-div.contents-hidden input {
-  display: none;
-}
-div.contents-hidden .hidden_show {
+div.hidden_show {
+  display: flex;
   margin-top: 2em;
   padding: 0;
   width: 0;
   height: 25em;
   overflow: hidden;
+  opacity: 0;
   transition: all 0.8s ease;
 }
-div.contents-hidden input:checked ~ .hidden_show {
+/* もっとみるのボタン */
+#morecareer {
+  display: none;
+}
+div.contents-hidden label {
+  padding: 1em 1.5em;
+  border: solid 1px #000;
+  cursor :pointer;
+  position: relative;
+  top: 1em;
+  left: 38%;
+}
+div.contents-hidden label::before {
+  padding: .7em;
   width: 100%;
+  height: 100%;
+  content: 'close';
+  text-align: center;
+  background: #efefef;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+#morecareer:checked ~ .hidden_show {
   height: 25em;
+  width: 100%;
   opacity: 1;
 }
+#morecareer:checked + label::before {
+  opacity: 1;
+}
+/* もっとみるの文章のとこ */
+h4 {
+
+}
+/* .hidden_show table {
+  width: 60%;
+} */
+
+
 
 
 /*--------------------------
