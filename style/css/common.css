@@ -172,28 +172,22 @@ img.subimages {
   width: 45%;
   float: right;
 }
-/* ラヂオのとこ */
+/* lang切り替えのとこ */
 div.about-career {
   width: 55%;
   font-size: .8em;
   position: relative;
 }
-div.contents-text {
+div.contents-language .en_ja {
   padding: 12em 6em 0;
   text-align: left;
   color: rgba(76, 76, 76, 0.73);
 }
-div.about-career label {
-  cursor:pointer;
-}
-#language {
-  display: none;
-}
-#language + label::before {
+div.contents-language label {
   display: inline-block;
   width: 4em;
   height: 4em;
-  content: 'EN';
+  content: '';
   font-size: .8em;
   text-align: center;
   border: .1em solid #ccc;
@@ -205,6 +199,61 @@ div.about-career label {
   position: absolute;
   top: 9em;
   left: 7.3em;
+}
+div.contents-language label::after {
+  display: block;
+  width: 3.89em;
+  height: 1.9em;
+  content: '';
+  font-size: .8em;
+  border-radius: 0 0 2em 2em;
+  position: absolute;
+  top: 2em;
+  left: 0;
+  background: #FFF;
+}
+.contents-language input:checked + .contents-language label::after {
+  color: #FFF;
+  width: 3.8em;
+  height: 1.9em;
+  content: 'JA';
+  background-color: #888888;
+  text-align: center;
+  transition: background-color .3s ease-in-out;
+  border-radius: 0 0 2em 2em;
+}
+div.contents-language input {
+  display: none;
+}
+.contents-language input:not(:checked) ~ .en_ja *[lang="ja"], .contents-language input:checked ~ .en_ja *[lang="en"] {
+  display: none;
+}
+
+/* div.about-career label {
+  cursor:pointer;
+}
+#language {
+  display: none;
+}
+#language + label::before {
+#language + label::after {
+  display: block;
+  width: 3.8em;
+  height: 1.9em;
+  content: '';
+  font-size: .8em;
+  border-radius: 0 0 2em 2em;
+  position: absolute;
+  top: 11em;
+  left: 7.4em;
+  background: #FFF;
+}
+#language:checked + label::before {
+  content: '';
+  background-color: #FFF;
+}
+#language:checked + label::after {
+
 }
 #language + label::after {
   display: block;
@@ -231,23 +280,9 @@ div.about-career label {
   text-align: center;
   transition: background-color .3s ease-in-out;
   border-radius: 0 0 2em 2em;
-}
-#language:not(:checked) + label + .contents-text *[lang="ja"], #language:checked + label + .contents-text *[lang="en"] {
-  display: none;
-}
-@keyframes contents-text *[lang="ja"] {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
+}*/
 
-contents-text *[lang="ja"]{
-    display: block;
-    animation: show 1s linear 0s;
-}
+ #language:checked + label + .en_ja *[lang="en"]
 
 /* もっとみるのとこ */
 div.contents-hidden {
