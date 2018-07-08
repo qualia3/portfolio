@@ -1,12 +1,3 @@
-$(function() {
-  Array.prototype.forEach.call(
-    document.body.querySelectorAll('label'),
-    function(l){
-      l.onclick = l.onclick || function(){}
-    });
-  }());
-});
-
 // Navスクロールすると固定 -----------------
 $(function() {
   var $win = $(window),
