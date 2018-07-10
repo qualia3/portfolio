@@ -61,25 +61,30 @@ ul.mainNav-list li.active a:hover {
 .clone-nav {
   margin-top: 0;
   width: 100%;
-  text-align: right;
+  text-align: center;
   text-transform: uppercase;
   position: fixed;
   top: 0;
   left: 0;
-  opacity: 1;
+  opacity: 0;
   transform: translateY(-100%);
   transition: .8s;
   z-index: 2;
 }
 .clone-nav li {
+  margin-right: 8em;
   display: inline-block;
-  margin-right: 3.5em;
   position: relative;
 }
+.clone-nav li:last-child {
+  margin-right: 0;
+}
 .mainNav-list.clone-nav li a{
+  margin-left: 0;
   color: #000;
 }
 .mainNav-list.clone-nav.is-show li a {
+  margin-left: 0;
   text-shadow: white 2px 1px 0;
   transition: color .5s;
 }
@@ -88,7 +93,7 @@ ul.mainNav-list li.active a:hover {
   height: 3rem;
   background-color: rgba(255, 255, 255, .8);
   box-shadow: 0 0 6px rgba(0, 0, 0, .2);
-  text-align: right;
+  text-align: center;
   opacity: 1;
   transform: translateY(0);
 }
@@ -194,7 +199,7 @@ div.en_ja {
   font-size: .8em;
   text-align: center;
   border: .1em solid #ccc;
-  border-radius: 2em;
+  border-radius: 3em;
   padding: .3em;
   background: #EEE;
   transition: background-color .2s ease-in-out;
@@ -209,7 +214,7 @@ div.en_ja {
   height: 1.9em;
   content: '';
   font-size: .8em;
-  border-radius: 0 0 2em 2em;
+  border-radius: 0 0 3em 3em;
   position: absolute;
   top: 9em;
   left: 7.4em;
@@ -279,6 +284,7 @@ div.hidden_show {
   padding: 0;
   width: 0;
   height: 15em;
+  color: rgba(76, 76, 76, 0.73);
   background: rgba(250, 250, 250, 0.75);
   opacity: 0;
   overflow: hidden;
@@ -321,12 +327,12 @@ div.contents-hidden label::before {
 h4 {
   margin-bottom: .5em;
   width: fit-content;
-  color: #999;
+  color: #c9a5de;
   font-size: 16px;
   font-weight: normal;
   text-align: left;
   letter-spacing: 2px;
-  border-bottom: solid 1px;
+  border-bottom: solid 1px #999;
 }
 .career-career {
   width: 100%;
@@ -348,18 +354,47 @@ h4 {
   list-style-position: inside;
 }
 
+/* スライドイメージ */
+section.slide-images {
+  margin-top: 10em;
+  width: auto;
+  height: 13em;
+  padding: 0;
+  position: relative;
+}
+section.slide-images img {
+  width: 13em;
+  height: 13em;
+}
+/* section.slide-images::after {
+  width: 100%;
+  height: 100%;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../../img/slide-images1.jpg), url(../../img/slide-images2.jpg), url(../../img/slide-images3.jpg), url(../../img/slide-images4.jpg), url(../../img/slide-images5.jpg), url(../../img/slide-images6.jpg), url(../../img/slide-images7.jpg);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: auto 13em, auto 13em, auto 13em, auto 13em, auto 13em, auto 13em, auto 13em;
+  background-position: top 0 left 0, top 0 left 13em, top 0 left 26em, top 0 left 39em, top 0 left 52em, top 0 left 65em, top 0 left 69em;
+  /* animation: bg-slider 23s linear infinite; /* 23sの部分背景画像の約数だとスムーズ */ */
+}
+/* @keyframes bg-slider {
+  from { background-position: top 0 left 0, top 0 left 13em, top 0 left 26em, top 0 left 39em, top 0 left 48.7em, top 0 left 58.4em, top 0 left 71.4em; }
+  to { background-position: -80em 0; } /* 1518pxとは使用した背景画像の長さ */
+} */ */
+
 
 
 /*--------------------------
 FOOTER
 --------------------------*/
 footer.foot-wrap {
-  margin: 0 auto;
   padding: 0 2.5%;
-  max-width: 1090px;
 }
 
 div.foot-contents {
+  margin: 0 4em;
   text-transform: uppercase;
 }
 
@@ -425,5 +460,98 @@ div.foot-contents span {
   div.foot-contents span{
     margin: 0 auto;
     text-align: center;
+  }
+}
+@media (max-width: 375px) {
+  h1 {
+    height: 1.4em;
+  }
+  h1 a {
+    font-size: .7em;
+  }
+  nav.mainNav {
+    margin-top: 0;
+  }
+  ul.mainNav-list li {
+    font-size: 11px;
+  }
+  ul.mainNav-list li a {
+    margin-left: .8em;
+  }
+  .clone-nav li {
+    margin-right: 3em;
+  }
+  .mainNav-list.clone-nav.is-show {
+    height: 2.3rem;
+  }
+  div.about-text {
+    margin-top: -.5em;
+    padding: .3em .5em 1em;
+    background: #FFF;
+    position: unset;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  div.about-text p {
+    font-size: .5em;
+  }
+  ul.sns {
+    text-align: center;
+    padding-top: 0;
+    padding-right: 0;
+  }
+  ul.sns li {
+    margin-top: 1.5em;
+    width: 2em;
+    height: 2em;
+    font-size: 8px;
+  }
+  ul.sns li.sns-ig img {
+    top: .3em;
+    left: 0.35em;
+    width: 60%;
+  }
+  img.subimages {
+    margin-top: .5em;
+  }
+  div.en_ja {
+    padding: 25em 1em 0 2em;
+    font-size: .5em;
+  }
+  #language + label::before {
+    padding: .1em;
+    width: 3em;
+    height: 3em;
+    top: 1.4em;
+    left: 2em;
+  }
+  #language + label::after {
+    width: 2.8em;
+    height: 1.4em;
+    top: 2.9em;
+    left: 2.05em;
+  }
+  #language:checked + label::after {
+    width: 2.8em;
+    height: 1.4em;
+    top: 2.9em;
+    left: 2.05em;
+  }
+  div.contents-hidden {
+    margin: 0;
+  }
+  /* div.contents-hidden::before {
+    top: -83em;
+  } */
+  footer.foot-wrap {
+    padding: 0;
+  }
+  ul.acclist li {
+    padding-bottom: 0;
+  }
+  div.foot-contents span {
+    padding-top: 8px;
+    font-size: .5em;
   }
 }

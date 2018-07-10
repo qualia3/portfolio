@@ -11,9 +11,11 @@
   <link rel="stylesheet" href="style/css/reset.css">
   <link rel="stylesheet" href="style/css/common.css">
   <link rel="stylesheet" href="style/css/master.css">
+  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="style/scroll.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i|Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i|Lato:100,100i,300,300i,400,400i|Wire+One&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+
 </head>
 <body>
   <header>
@@ -100,6 +102,19 @@
         </div>
       </div><!-- /contents-hidden -->
     </div><!-- /about-career -->
+  </section>
+  <section class="slide-images">
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide-item"><img data-lazy="img/slide-images1.jpg" alt="コンテンツ1" /></div>
+        <div class="slide-item"><img data-lazy="img/slide-images2.jpg" alt="コンテンツ2" /></div>
+        <div class="slide-item"><img data-lazy="img/slide-images3.jpg" alt="コンテンツ3" /></div>
+        <div class="slide-item"><img data-lazy="img/slide-images4.jpg" alt="コンテンツ4" /></div>
+        <div class="slide-item"><img data-lazy="img/slide-images5.jpg" alt="コンテンツ5" /></div>
+        <div class="slide-item"><img data-lazy="img/slide-images6.jpg" alt="コンテンツ6" /></div>
+        <div class="slide-item"><img data-lazy="img/slide-images7.jpg" alt="コンテンツ7" /></div>
+      </div>
+    </div>
   </section>
   <section id="atWorks">
     <div class="works-inner">
@@ -235,5 +250,44 @@
       <span>© 2017 sasaki&thinsp;yukie</span>
     </div>
   </footer>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+    var $slider_container = $('.slider-container'),
+    $slider = $('.slider');
+    // スライド初期化時にクラスを追加
+    // はじめはdisplay:noneしておき、.initializedが追加されたらdisplay:block
+    $slider.on('init', function(){
+      $slider_container.addClass('initialized');
+    });
+    $slider.slick({
+      accessibility: false,
+      autoplay: true,
+      arrows: false,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      adaptiveHeight: true,
+      autoplaySpeed: 4000,
+      respondTo: 'window',
+      // // レスポンシブ設定
+      // responsive: [
+      //   {
+      //     breakpoint: 1024,     // 767〜1023px
+      //     settings: {
+      //
+      //     }
+      //   },
+      //   {
+      //     breakpoint: 767,      // 480〜766px
+      //     settings: {
+      //
+      //     }
+      //   }
+      // ],
+    });
+});
+
+  </script>
 </body>
 </html>

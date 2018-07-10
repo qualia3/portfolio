@@ -1,6 +1,6 @@
 section#atWorks {
   font-family: 'Avenir Next W01 Thin', Arial, 'AxisStd-Light', "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-  margin-top: 6em;
+  margin-top: 30em;
   height: auto;
   flex-wrap: wrap;
 }
@@ -259,5 +259,17 @@ div.modal-image {
   .modal .modal-content dt {
     font-size: 1.2em;
     width: 40vw;
+  }
+}
+@media (max-width: 375px) {
+  div.works-caption h3 {
+    padding-top: 1.7em;
+  }
+  .works-inner li {
+    width: 46%;
+  }
+  p.works-text {
+    padding: 0 2em;
+    font-size: .5em;
   }
 }
