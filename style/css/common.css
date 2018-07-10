@@ -443,6 +443,29 @@ div.foot-contents span {
 小きい時
 --------------------------*/
 @media (max-width: 875px) {
+  h1 a {
+    font-size: 1.4em;
+  }
+  nav.mainNav {
+    margin-top: -1em;
+  }
+  .clone-nav li {
+    margin-right: 6em;
+  }
+  div.about-text {
+    top: 10%;
+    right: 1em;
+  }
+  h2 {
+    font-size: 3em;
+  }
+  ul.sns {
+    padding-top: 17%;
+    padding-right: 21%;
+  }
+  div.about-text p {
+    font-size: .5em;
+  }
   footer.foot-wrap {
     padding: 0 10%;
   }
