@@ -254,6 +254,9 @@ div.modal-image {
   section#atWorks li {
     height: 10em;
   }
+  section#atWorks {
+    margin-top: 0;
+  }
 }
 @media/*小きい時*/ (max-width: 750px) {
   .modal .modal-content dt {
@@ -271,5 +274,6 @@ div.modal-image {
   p.works-text {
     padding: 0 2em;
     font-size: .5em;
+    bottom: .9rem;
   }
 }
