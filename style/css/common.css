@@ -429,7 +429,7 @@ div.foot-contents span {
 /*--------------------------
 大きい時
 --------------------------*/
-@media (min-width: 876px) {
+@media (min-width: 767px) {
   div.foot-contents {
     display: flex;
     padding: 1.5em 0 1em;
@@ -442,7 +442,7 @@ div.foot-contents span {
 /*--------------------------
 小きい時
 --------------------------*/
-@media (max-width: 875px) {
+@media (max-width: 768px) {
   h1 a {
     font-size: 1.4em;
   }
@@ -460,7 +460,7 @@ div.foot-contents span {
     font-size: 3em;
   }
   ul.sns {
-    padding-top: 17%;
+    padding-top: 13%;
     padding-right: 21%;
   }
   div.about-text p {
@@ -480,13 +480,13 @@ div.foot-contents span {
     box-ordinal-group: 2;
   }
   div.contents-hidden {
-    margin: 5.5em .5em 2.5em 1.5em;
+    margin: 3.5em .5em 3.5em 1.5em;
     -webkit-box-ordinal-group: 1;
     -moz-ordinal-group: 1;
     box-ordinal-group: 1;
   }
   div.contents-hidden::before {
-    top: 15em;
+    top: 14em;
     left: -1em;
   }
   div.contents-hidden label {
@@ -511,10 +511,19 @@ div.foot-contents span {
   .career-skill li {
     font-size: .5em;
   }
+  #language + label::before {
+    top: 43%;
+    left: 3em;
+  }
+  #language + label::after {
+    top: 45.3%;
+    left: 3.1em;
+  }
   div.en_ja {
     padding: 12em 2em;
     width: 181.8%;
   }
+
 
   footer.foot-wrap {
     padding: 0 10%;
@@ -535,6 +544,7 @@ div.foot-contents span {
     text-align: center;
   }
 }
+
 @media (max-width: 375px) {
   h1 {
     height: 1.4em;
