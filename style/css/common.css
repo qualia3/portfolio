@@ -452,8 +452,14 @@ div.foot-contents span {
   ul.mainNav-list li:last-child {
     display: none;
   }
+  .mainNav-list.clone-nav.is-show li:nth-child(3n) {
+    margin-right: 0;
+  }
   .clone-nav li {
     margin-right: 6em;
+  }
+  .clone-nav li:nth-child(3n) {
+    margin-right: 0;
   }
   div.about-text {
     top: 10%;
@@ -509,7 +515,7 @@ div.foot-contents span {
   .career-skill {
     margin-left: 0;
     margin-top: 4em;
-    width: 65%;
+    width: 100%;
   }
   .career-skill li {
     font-size: .5em;
@@ -523,7 +529,7 @@ div.foot-contents span {
     left: 3.1em;
   }
   div.en_ja {
-    padding: 13em 2em 3em;
+    padding: 13em 2em 6em;
     width: 181.8%;
   }
   section.slide-images {
