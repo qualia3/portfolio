@@ -31,7 +31,7 @@ p.works-text {
   font-style: oblique;
   position: absolute;
   bottom: .6rem;
-  line-height: 1;
+  line-height: 1.3;
 }
 
 svg#works-title {
@@ -290,6 +290,5 @@ div.modal-image {
   p.works-text {
     padding: 0 2em;
     font-size: .5em;
-    bottom: .9rem;
   }
 }
