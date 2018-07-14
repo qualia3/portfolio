@@ -115,6 +115,9 @@ div.lang label {
 div.en_ja {
   letter-spacing: .1em;
 }
+.en_ja *[lang="en"] {
+  text-align: center;
+}
 .en_ja *[lang="ja"] {
   font-family: '游ゴシック', 'Yu Gothic', YuGothic, 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;
   letter-spacing: 0;
