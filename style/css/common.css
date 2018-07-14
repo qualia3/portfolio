@@ -338,7 +338,7 @@ ul.acclist li {
   RESPONSIVE
 =======================================*/
 /*大きい時*/
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .pc-none {
     display: none;
   }
@@ -360,7 +360,7 @@ ul.acclist li {
   }
 }
 /*小きい時*/
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .wrap {
     font-size: 10px;
     letter-spacing: .19em;

@@ -134,11 +134,11 @@ div.modal-image {
   RESPONSIVE
 =======================================*/
 /*大きい時*/
-@media (min-width: 769px) {
+@media (min-width: 768px) {
 }
 
 /*小きい時*/
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .modal .modal-content dt {
     font-size: 1.2em;
     width: 40vw;
