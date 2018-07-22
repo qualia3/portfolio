@@ -26,7 +26,7 @@ body {
 }
 /* loopslider */
 .sliderWrap {
-  height: 400px;
+  height: 26.666em;
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -35,26 +35,26 @@ body {
 .slider {
   margin: 0 auto;
   width: 100%;
-  height: 400px;
+  height: 26.666em;
   text-align: left;
   overflow: hidden;
   position: relative;
 }
 .slider ul {
-  height: 400px;
+  height: 26.666em;
   float: left;
   overflow: hidden;
 }
 .slider ul li {
   display: inline;
-  width: 400px;
-  height: 400px;
+  width: 26.666em;
+  height: 26.666em;
   float: left;
   overflow: hidden;
 }
 .slider img {
   width: auto;
-  height: 400px;
+  height: 26.666em;
 }
 /* ClearFixElements */
 .sliderWrap:after {
@@ -64,14 +64,15 @@ body {
 }
 /* PROSPECTS */
 div.prospects {
-  margin: 0 10.8em;
+  margin: 0 10%;
 }
 h1 {
-  padding-top: .7em;
+  padding: 1.2em 0 .3em;
   font-size: 4.5em;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: .1em;
+  line-height: 1;
 }
 .prospects p {
   font-size: 1.3em;
@@ -104,7 +105,7 @@ section.profile {
   transform: translate(-50%, -50%);
 }
 div.lang {
-  padding: 11em 10.8em 5em;
+  padding: 11em 10% 5.5em;
   background: #f6f6f6;
 }
 div.lang label {
@@ -115,8 +116,8 @@ div.lang label {
 div.en_ja {
   letter-spacing: .1em;
 }
-.en_ja *[lang="en"] {
-  text-align: center;
+.en_ja *[lang="e"] {
+  /* text-align: center; */
 }
 .en_ja *[lang="ja"] {
   font-family: '游ゴシック', 'Yu Gothic', YuGothic, 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;
@@ -192,7 +193,7 @@ img.obj-dia {
 =======================================*/
 section.career {
   display: flex;
-  margin: 0 10.8em;
+  margin: 0 10%;
 }
 h2 {
   padding: .5em 0;
@@ -232,42 +233,42 @@ section.works {
   width: 100%;
   margin-bottom: 1.7em;
   margin-top: 5em;
-  padding: 0 11em;
+  padding: 0 8%;
   height: auto;
-  flex-wrap: wrap;
   background: -webkit-linear-gradient(#8641c1, #ffa67b);
   background: -o-linear-gradient(#8641c1, #ffa67b);
   background: linear-gradient(#8641c1, #ffa67b);
 }
+.works-ttl-area {
+  padding-top: 2.5em;
+}
 h3 {
-  padding: 1.3em 0 .3em;
+  margin: 0 3%;
+  width: 97%;
   color: #FFF;
   font-size: 4em;
   font-weight: normal;
   text-transform: uppercase;
 }
 ul.works-inner {
+  display: flex;
   font-family: '游ゴシック', 'Yu Gothic', YuGothic, 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;
   color: #FFF;
   font-size: 0;
   letter-spacing: 0;
 }
 .works-inner li {
-  display: inline-block;
-  margin-right: 8.9%;
-  margin-bottom: 7%;
-  width: auto;
-  height: 201px;
+  margin: 0 1%;
+  width: 99%;
+  box-sizing: border-box;
   vertical-align: top;
   font-size: 15px;
 }
-.works-inner li:last-child {
-  margin-right: 0;
-}
 .works-inner label {
   display: block;
-  width: 13.4em;
-  height: 13.4em;
+  margin: 0 auto;
+  max-width: 14em;
+  height: 14em;
   background: #CCC;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -285,31 +286,32 @@ ul.works-inner {
 .works-inner label.link1 {
   background-image: url(../../img/gregory.jpg);
   background-size: 225%;
-  background-position: -7.7em -1.7em;
+  background-position: -8em -1em;
 }
 .works-inner label.link2 {
   background-image: url(../../img/goldengoose_men.jpg);
-  background-size: 115%;
-  background-position: -.7em -13em;
+  background-size: 110%;
+  background-position: -.6em -12em;
 }
 .works-inner label.link3 {
   background-image: url(../../img/tkg_html_mail.jpg);
   background-size: 300%;
-  background-position: -7em -77em;
+  background-position: -7em -83em;
 }
 .works-inner label.link4 {
   background-image: url(../../img/tkg_lp.png);
   background-size: 286%;
-  background-position: -12em -2em;
+  background-position: -12.6em -2.5em;
 }
 .works-inner li p {
+  width: fit-content;
   margin-top: 1em;
   font-size: .8em;
   letter-spacing: .08em;
 }
 p.works-text {
-  margin-right: 5em;
-  padding: 3.5em 0 1em;
+  margin-right: 4%;
+  padding: 10em 0 1em;
   color: #FFF;
   text-align: right;
   font-size: .8em;
@@ -319,7 +321,7 @@ p.works-text {
 /* FOOTER
 =======================================*/
 footer.foot-contents {
-  margin: 0 10.8em;
+  margin: 0 10%;
   text-transform: uppercase;
   font-size: 15px;
 }
@@ -330,6 +332,13 @@ nav.footNav {
 ul.acclist li {
   display: inline-block;
 }
+ul.acclist li:hover {
+  border-bottom: 1px solid;
+}
+ul.acclist li a {
+  display: block;
+  height: 100%;
+}
 .foot-contents span {
   display: block;
   padding-right: 1%;
@@ -337,11 +346,12 @@ ul.acclist li {
   text-align: right;
 }
 
+
 /*=======================================
   RESPONSIVE
 =======================================*/
 /*大きい時*/
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .pc-none {
     display: none;
   }
@@ -363,32 +373,31 @@ ul.acclist li {
   }
 }
 /*小きい時*/
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .wrap {
     font-size: 10px;
     letter-spacing: .19em;
   }
   .sliderWrap {
-    height: 300px;
+    height: 13em;
   }
   .slider {
-    height: 300px;
+    height: 13em;
   }
   .slider ul {
-    height: 300px;
+    height: 13em;
   }
   .slider ul li {
-    width: 300px;
-    height: 300px;
+    width: 13em;
+    height: 13em;
   }
   .slider img {
-    height: 300px;
+    height: 13em;
   }
   div.prospects {
     margin: 0px 7%;
   }
   h1 {
-    font-size: 5em;
     line-height: 1;
   }
   .prospects p {
@@ -477,10 +486,10 @@ ul.acclist li {
     line-height: 1.4;
     text-align: left;
   }
-  .works-inner li:nth-child(2n-1) {
+  /* .works-inner li:nth-child(2n-1) {
     margin-right: 12%;
     margin-bottom: 0;
-  }
+  } */
   p.works-text {
     padding: 1.5em 0 1em;
     font-size: .5em;
@@ -516,7 +525,7 @@ ul.acclist li {
     text-align: center;
 }
 /*小きい時*/
-@media (max-width: 320px) {
+@media screen and (max-width: 320px) {
   .works-inner label {
     width: 12em;
     height: 12em;
