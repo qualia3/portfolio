@@ -86,8 +86,8 @@ section.profile {
 }
 .thumbnail-area {
   margin: 0 auto;
-  width: 250px;
-  height: 250px;
+  width: 17em;
+  height: 17em;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
@@ -200,6 +200,7 @@ h2 {
   font-size: 2.6666em;
   font-weight: normal;
   text-transform: uppercase;
+  letter-spacing: .08em;
 }
 div.career-tool {
   margin-left: 1em;
@@ -243,12 +244,12 @@ section.works {
   padding-top: 2.5em;
 }
 h3 {
-  margin: 0 3%;
-  width: 97%;
+  margin: 0 3.5%;
   color: #FFF;
   font-size: 4em;
   font-weight: normal;
   text-transform: uppercase;
+  letter-spacing: .09em;
 }
 ul.works-inner {
   display: flex;
@@ -259,7 +260,7 @@ ul.works-inner {
 }
 .works-inner li {
   margin: 0 1%;
-  width: 99%;
+  width: 98%;
   box-sizing: border-box;
   vertical-align: top;
   font-size: 15px;
@@ -267,8 +268,8 @@ ul.works-inner {
 .works-inner label {
   display: block;
   margin: 0 auto;
-  max-width: 14em;
-  height: 14em;
+  max-width: 15em;
+  height: 15em;
   background: #CCC;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -286,27 +287,27 @@ ul.works-inner {
 .works-inner label.link1 {
   background-image: url(../../img/gregory.jpg);
   background-size: 225%;
-  background-position: -8em -1em;
+  background-position: -8.6em -1em;
 }
 .works-inner label.link2 {
   background-image: url(../../img/goldengoose_men.jpg);
   background-size: 110%;
-  background-position: -.6em -12em;
+  background-position: -.5em -13em;
 }
 .works-inner label.link3 {
   background-image: url(../../img/tkg_html_mail.jpg);
   background-size: 300%;
-  background-position: -7em -83em;
+  background-position: -7em -89em;
 }
 .works-inner label.link4 {
   background-image: url(../../img/tkg_lp.png);
   background-size: 286%;
-  background-position: -12.6em -2.5em;
+  background-position: -13.6em -2.5em;
 }
 .works-inner li p {
   width: fit-content;
   margin-top: 1em;
-  font-size: .8em;
+  font-size: 12px;
   letter-spacing: .08em;
 }
 p.works-text {
@@ -351,8 +352,78 @@ ul.acclist li a {
   RESPONSIVE
 =======================================*/
 /*大きい時*/
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 813px) {
   .pc-none {
+    display: none;
+  }
+  h1 {
+    font-size: 3.5em;
+  }
+  div.lang label {
+    left: 89%;
+  }
+  h2 {
+    padding: 0;
+  }
+  .career-tool p.tool-inner-sp {
+    display: none;
+  }
+  ul.tool-inner {
+    font-size: .8em;
+  }
+  div.career-career {
+    margin-left: 3em;
+  }
+  div.career-inner {
+    font-size: .8em;
+  }
+  .works-inner label {
+    max-width: 13em;
+    height: 10em;
+  }
+  .works-inner label.link1 {
+    background-position: -5.6em -1em;
+  }
+  .works-inner label.link2 {
+    background-position: -.5em -9em;
+  }
+  .works-inner label.link3 {
+    background-position: -5em -59em;
+  }
+  .works-inner label.link4 {
+    background-position: -9em -1.5em;
+  }
+  .works-inner li p {
+    font-size: 11px;
+  }
+  p.works-text {
+    margin: 0;
+    padding: 8em 0 1em;
+  }
+  footer.foot-contents {
+    display: block;
+    margin-bottom: .5em;
+    text-align: center;
+  }
+  .foot-contents ul.acclist {
+    margin-bottom: .8em;
+  }
+  .foot-contents ul.acclist li {
+    margin-right: 1em;
+  }
+  .foot-contents ul.acclist li:last-child {
+    margin-right: 0;
+  }
+  .foot-contents span {
+    padding-right: 0;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 769px) {
+  .pc-none {
+    display: none;
+  }
+  .for-pad {
     display: none;
   }
   .career-tool p.tool-inner-sp {
@@ -368,15 +439,14 @@ ul.acclist li a {
   .foot-contents ul.acclist li:last-child {
     margin-right: 0;
   }
-  .foot-contents span {
-    padding-right: 1%;
-  }
 }
 /*小きい時*/
-@media screen and (max-width: 767px) {
-  .wrap {
-    font-size: 10px;
-    letter-spacing: .19em;
+@media screen and (max-width: 414px) {
+  .pc-none {
+    display: block;
+  }
+  .for-pad {
+    display: none;
   }
   .sliderWrap {
     height: 13em;
@@ -394,136 +464,118 @@ ul.acclist li a {
   .slider img {
     height: 13em;
   }
-  div.prospects {
-    margin: 0px 7%;
-  }
   h1 {
-    line-height: 1;
+    font-size: 3.5em;
+    letter-spacing: 0.03em;
   }
   .prospects p {
-    margin-top: 1.5em;
-    font-size: 1.6em;
-    line-height: 1.6em;
+    font-size: 1em;
   }
   section.profile {
-    margin-top: -2em;
-    margin-bottom: -1em;
+    margin-top: 0;
   }
   .thumbnail-area {
-    width: 10em;
-    height: 10em;
-    top: 5em;
-  }
+    width: 7em;
+    height: 7em;
+    top: 3.5em;
+    }
   .thumbnail-area img {
-    height: 13em;
-    top: 4.5em;
-    left: 5em;
+    height: 9.2em;
+    top: 47px;
+    left: 52px;
   }
   div.lang {
-    padding: 6em 7% 5em;
-    letter-spacing: .09em;
+    padding: 6em 10% 5.5em;
+    font-size: .9em;
   }
   div.lang label {
-    left: 88%;
+    top: -1em;
+    left: 83%;
+  }
+  .lang-bottom-img {
+    top: -1.6em;
+  }
+  img.obj-dia {
+    width: 2em;
   }
   section.career {
     display: block;
-    margin: 0 10%;
   }
   h2 {
     padding: 0;
-    letter-spacing: .09em;
   }
-  div.career-tool {
-    margin-left: 0;
-  }
-  .career-tool ul.tool-inner {
+  ul.tool-inner {
     display: none;
-    letter-spacing: .1em;
+  }
+  .career-tool p.tool-inner-sp {
+    display: block;
   }
   div.career-career {
-    margin-top: 2.5em;
-    margin-left: 0;
+    margin-top: 3em;
+    margin-left: 1em;
   }
-  div.career-career p {
-    letter-spacing: .1em;
+  div.career-inner {
+    font-size: .8em;
   }
   section.works {
     margin-top: 4.5em;
-    margin-bottom: 1em;
+    margin-bottom: 1.2em;
     padding: 0 10%;
-    text-align: center;
   }
   h3 {
-    padding: .5em 0 0;
-    text-align: left;
-    letter-spacing: .09em;
+    margin: 0;
+  }
+  ul.works-inner {
+    display: block;
   }
   .works-inner li {
-    margin: 0 auto;
-    margin-bottom: 3%;
-    height: auto;
-    font-size: 10px;
+    display: inline-block;
+    /* margin: 0 2%;
+    width: 98%; */
   }
   .works-inner label {
-    width: 12.5em;
-    height: 12.5em;
+    /* max-width: 9em;
+    height: 9em; */
   }
   .works-inner label.link1 {
-    background-position: -7em -1.7em;
+    background-position: -5em -1em;
   }
   .works-inner label.link2 {
-    background-position: -.7em -11.5em;
+    background-position: -.1em -7em;
   }
   .works-inner label.link3 {
-    background-position: -7em -71em;
+    background-position: -4em -51em;
   }
   .works-inner label.link4 {
-    background-position: -11em -2em;
+    background-position: -8em -1.3em;
   }
   .works-inner li p {
-    margin-top: .1em;
-    line-height: 1.4;
-    text-align: left;
+    font-size: .6em;
   }
-  /* .works-inner li:nth-child(2n-1) {
-    margin-right: 12%;
-    margin-bottom: 0;
-  } */
   p.works-text {
-    padding: 1.5em 0 1em;
+    margin: 0 auto;
+    padding: 9em 0 1em;
     font-size: .5em;
-    width: 100%;
-    line-height: 1.3em;
-    letter-spacing: 0;
   }
   footer.foot-contents {
-    margin: 0 2em;
-    padding: .6em 0;
+    display: block;
+    letter-spacing: .13em;
   }
   .foot-contents ul.acclist {
-    margin: 0 auto;
     text-align: center;
+    font-size: 1.2em;
+    margin-bottom: .5em;
   }
   .foot-contents ul.acclist li {
-    margin: 0 1.5%;
-    text-align: center;
-  }
-  ul.acclist {
-    line-height: 1.4;
-  }
-  ul.acclist li {
-  }
-  .foot-contents {
-    margin: 0 2em;
+    margin-right: 0;
+    padding: 0 .4em;
   }
   .foot-contents span {
-    margin: 0 auto;
-    padding-top: .7em;
-    padding-right: 0;
-    font-size: .8em;
     text-align: center;
+  }
 }
+/* @media screen and (max-width: 812px) {
+
 /*小きい時*/
 @media screen and (max-width: 320px) {
   .works-inner label {
