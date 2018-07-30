@@ -522,6 +522,9 @@ ul.acclist li a {
     margin-bottom: 1.2em;
     padding: 0 10%;
   }
+  .works-ttl-area {
+    padding-top: 1.5em;
+  }
   h3 {
     margin: 0;
   }
@@ -530,31 +533,33 @@ ul.acclist li a {
   }
   .works-inner li {
     display: inline-block;
-    /* margin: 0 2%;
-    width: 98%; */
+    margin: 0 2% 3em;
+    width: 46%;
   }
   .works-inner label {
-    /* max-width: 9em;
-    height: 9em; */
+    max-width: 8em;
+    height: 8em;
   }
   .works-inner label.link1 {
-    background-position: -5em -1em;
+    background-position: -4.7em -1em;
   }
   .works-inner label.link2 {
-    background-position: -.1em -7em;
+    background-position: -.3em -7em;
   }
   .works-inner label.link3 {
-    background-position: -4em -51em;
+    background-position: -3.7em -48em;
   }
   .works-inner label.link4 {
-    background-position: -8em -1.3em;
+    background-position: -7.2em -1.5em;
   }
   .works-inner li p {
-    font-size: .6em;
+    font-size: 0.1em;
+    line-height: 1.3;
+    margin-top: .5em;
   }
   p.works-text {
     margin: 0 auto;
-    padding: 9em 0 1em;
+    padding: 3em 0 .5em;
     font-size: .5em;
   }
   footer.foot-contents {
@@ -578,11 +583,38 @@ ul.acclist li a {
 
 /*小きい時*/
 @media screen and (max-width: 320px) {
-  .works-inner label {
-    width: 12em;
-    height: 12em;
+  .wrap {
+    font-size: 14px;
   }
-  .works-inner li:nth-child(2n-1) {
-    margin-right: 6%;
+  section.career {
+    font-size: 13px;
+  }
+  section.works {
+    font-size: 12px;
+  }
+  .works-inner label {
+    width: 7em;
+    height: 7em;
+  }
+  .works-inner label.link1 {
+    background-position: -4em -.5em;
+  }
+  .works-inner label.link2 {
+    background-position: -.2em -6em;
+  }
+  .works-inner label.link3 {
+    background-position: -3.2em -42em;
+  }
+  .works-inner label.link4 {
+    background-position: -6.3em -1.3em;
+  }
+  p.works-text {
+    letter-spacing: 0;
+  }
+  .foot-contents ul.acclist {
+    font-size: 1em;
+  }
+  .foot-contents span {
+    font-size: 12px;
   }
 }

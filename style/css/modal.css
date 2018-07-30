@@ -149,11 +149,29 @@ div.modal-image {
   .modal .modal-content {
     font-size: .5em;
   }
+  .modal .modal-label {
+    padding: .17em 0.7em 0;
+    font-size: 1.2em;
+  }
   div.modal-image {
     margin: 1em;
     height: 54vh;
   }
   .modal .modal-content dd:last-child {
     padding: 1.5em 0 0 .3em;
+  }
+}
+@media (max-width: 320px) {
+  .modal .modal-content {
+    padding-top: 2em;
+  }
+  .modal .modal-content dd {
+    line-height: 1.7em;
+  }
+  div.modal-image {
+    margin: 0.7em;
+  }
+  .modal .modal-content dd p {
+    width: 95%;
   }
 }
