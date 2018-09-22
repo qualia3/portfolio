@@ -269,10 +269,16 @@ ul.works-inner {
   display: block;
   margin: 0 auto;
   max-width: 15em;
+  width: 100%;
   height: 15em;
   background: #CCC;
   background-repeat: no-repeat;
   cursor: pointer;
+}
+
+.works-inner label.link1:hover {
+  transform: background-image scale(1.1);
+  transition-duration: 0.3s;
 }
 .works-inner label::before {
   display: block;
@@ -289,6 +295,13 @@ ul.works-inner {
   background-size: 225%;
   background-position: -8.6em -1em;
 }
+/* .works-inner label.link1:hover {
+   opacity: .8;
+    -moz-transform: background scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  } */
 .works-inner label.link2 {
   background-image: url(../../img/goldengoose_men.jpg);
   background-size: 110%;
